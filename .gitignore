@@ -1,0 +1,199 @@
+#
+# This is the latest '.gitignore' file: [WITHOUT SENSITIVE FILES - config.properties]
+#
+
+# ==============================================================
+#  .gitignore — Maven Web Project (Selenium / TestNG framework)
+# ==============================================================
+
+
+# ============================================================
+#  1. BUILD OUTPUT & COMPILED ARTIFACTS
+#  (No leading "/" so nested Maven modules are covered too)
+# ============================================================
+
+# Build output directories (Maven, Eclipse, IntelliJ)
+target/
+build/
+bin/
+out/
+.target/
+.springBeans
+.apt_generated/
+.factorypath
+
+# Compiled class files (in case any leak outside target/)
+*.class
+
+# Package files — only ignore if you don't commit JARs intentionally
+# *.jar
+# *.war
+# *.ear
+# *.zip
+
+
+# ============================================================
+#  2. MAVEN-SPECIFIC FILES
+# ============================================================
+
+# Maven release artifacts
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+
+# ============================================================
+#  3. TEST EXECUTION OUTPUT (TestNG / Surefire / Reports)
+# ============================================================
+
+# TestNG / Surefire / Report output
+test-output/
+test-output-report/
+emailable-report.html
+surefire-reports/
+failsafe-reports/
+ExtentReports/
+extent-reports/
+allure-results/
+allure-report/
+
+# TestNG auto-generated artifacts
+# (Do NOT ignore testng.xml — it is the suite config, must be committed)
+testng-failed.xml
+testng-results.xml
+testng-reports/
+junitreports/
+TEST-*.xml
+
+
+# ============================================================
+#  4. TEST COVERAGE REPORTS (JaCoCo / Cobertura / SonarQube)
+# ============================================================
+
+jacoco.exec
+*.exec
+target/site/jacoco/
+cobertura.ser
+.scannerwork/
+
+
+# ============================================================
+#  5. SELENIUM RUNTIME ARTIFACTS
+#  (Remove "screenshots/" if you intentionally commit evidence images)
+# ============================================================
+
+screenshots/
+downloads/
+*.har
+browser-profile/
+.java/
+
+
+# ============================================================
+#  6. LOGS & JVM DUMPS
+# ============================================================
+
+# Logs
+*.log
+logs/
+
+# Heap dumps & thread dumps (Selenium tests often produce these)
+*.hprof
+java_pid*.hprof
+thread-dump-*.txt
+
+
+# ============================================================
+#  7. IDE FILES
+# ============================================================
+
+# ---- Eclipse ----
+# (.metadata/ and .recommenders/ are removed — they live one level
+#  above the repo, in the workspace folder, so never matched)
+.classpath
+.project
+.settings/
+.externalToolBuilders/
+*.launch
+
+# ---- IntelliJ IDEA ----
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ---- VS Code ----
+.vscode/
+.history/
+*.code-workspace
+
+
+# ============================================================
+#  8. CODE QUALITY TOOLS
+# ============================================================
+
+# SonarLint / SonarQube
+.sonarlint/
+.sonar/
+
+
+# ============================================================
+#  SENSITIVE FILES — NEVER COMMIT REAL CREDENTIALS (Commit a "config.properties.example" with dummy values instead)
+# ============================================================
+
+
+# ============================================================
+# 9. SPRING BOOT LOCAL CONFIG OVERRIDES
+#  (Commit application.yml / application.properties, ignore local variants)
+# ============================================================
+
+application-local.*
+application-dev.*
+
+
+# ============================================================
+# 10. OS / EDITOR TEMP FILES
+# ============================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+Desktop.ini
+ $RECYCLE.BIN/
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Editor backup/swap files
+*.tmp
+*.bak
+*.swp
+*~
+
+
+# ============================================================
+# 11. IMPORTANT — DO NOT IGNORE THE FOLLOWING
+#     (They MUST be committed)
+# ============================================================
+#   testng.xml
+#   pom.xml
+#   mvnw
+#   mvnw.cmd
+#   .mvn/
+#   .mvn/wrapper/maven-wrapper.properties
+# ============================================================

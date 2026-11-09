@@ -1,0 +1,17 @@
+<configuration>
+
+    <!-- Reduce TestNG logs -->
+    <logger name="org.testng" level="WARN"/>
+
+    <!-- Your application logs -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+</configuration>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Ecom Database Testing Suite" verbose="1" parallel="false">
+	<test name="API + DB Validation Tests - User Module" verbose="0">
+		<classes>
+			<class name="com.webprj.ecom.tests.testcases.UserTests" />
+			<class name="com.webprj.ecom.tests.testcases.ProductTests" />
+			<class name="com.webprj.ecom.tests.testcases.OrderTests" />
+			<class name="com.webprj.ecom.tests.testcases.OrderItemTests" />
+			<class name="com.webprj.ecom.tests.testcases.PaymentTests" />
+		</classes>
+	</test>
+</suite>
